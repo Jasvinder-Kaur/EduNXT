@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    /*  ===== EXTERNAL LINKS ======  */
+
+/* Montserrat font family */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+/*  ===== VARIABLE ======  */
+:root {
+  --primary-clr: hsl(237, 20%, 43%);
+  --second-clr: hsl(257, 21%, 50%);
+  --primary-clr-alt: rgb(150, 139, 179);
+  --white-clr: hsl(260, 60%, 99%);
+  --light-indigo-clr: hsl(277, 82%, 96%);
+  --pink-clr: hsl(306, 26%, 84%);
+  --orange-color: hsl(12, 100%, 72%);
+  --light-green-clr: hsl(171, 40%, 86%);
+}
+
+/*  ===== BASE ======  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.2rem 2rem;
+}
+
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Montserrat", "Avenir", sans-serif;
+  background-color: var(--white-clr);
+  display: flex;
+  flex-direction: column;
+}
+/*  ===== HEADER ======  */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--white-clr);
+}
+.nav-items {
+  display: flex;
+  margin-left: 380px;
+}
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: rgb(239, 239, 239);
+}
+.nav-link::before {
+  content: "";
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms;
+}
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.menu-icons {
+  display: none;
+}
+.bx-menu,
+.bx-x {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: var(--white-clr);
+}
+.bx-x {
+  display: none !important;
+}
+.hide-icon {
+  display: none !important;
+}
+.show-icon {
+  display: block !important;
+}
+/*  ===== BODY ========  */
+.hero {
+  background-image: linear-gradient(100deg,  rgba(29, 32, 107, 0.5), rgb(190, 200, 230, 0.1)),
+  url("https://www.moqdigital.com/hubfs/Apps%20hubspot%20size.png");
+  backdrop-filter: brightness(100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+#signup:hover
+{
+  background-color: rgb(173, 53, 53);
+  border-color: rgb(173, 53, 53);
+}
+#links-login
+{
+  display: flex;
+  flex-direction: row;
+}
+#signup
+{
+  background-color: rgba(163, 11, 11, 0.9);
+  border-color: rgba(163, 11, 11, 0.9);
+  border-radius: 5%;
+  height: 50px;
+  font-size: 40px;
+  width: 110px;
+  border-top-width: 30px;
+  text-align: center;
+  margin-left: 40px;
+}
+.section_1 {
+  height: 100vh;
+}
+.slogan {
+  margin-top: 3rem;
+}
+.slogan .slogan-title {
+  color: rgb(239, 239, 239);
+  font-size: 2rem;
+  letter-spacing: 0.01rem;
+  max-width: 30rem;
+}
+.slogan .slogan-text {
+  color: var(--white-clr);
+  color: rgb(226, 226, 226);
+  font-size: 1.2rem;
+  letter-spacing: 0.02rem;
+  margin: 1rem 0;
+  max-width: 28rem;
+}
+
+/* - About - */
+#sec2-img
+{
+    height: 500px;
+    border-width: 10px;
+    border-color: whitesmoke;
+}
+#about-us
+{
+    background-color: rgb(74, 89, 214, 0.8);
+}
+.about {
+  padding: 2rem 1rem;
+  background-color: var(--primary-clr);
+}
+.about .about-title {
+  text-transform: capitalize;
+  color: var(--white-clr);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  position: relative;
+}
+.feature {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.bx-check-circle {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: var(--white-clr);
+}
+.feature_desc {
+  color: var(--white-clr);
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.8;
+  max-width: 30rem;
+  line-height: 1.5rem;
+}
+
+/* section 3 */
+
+.role-title
+{
+  color: rgb(74, 89, 214, 1);
+  font-weight: bolder;
+  font-size: 60px;
+  margin-top: 100px;
+}
+.role-div
+{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+}
+.learner
+{
+  background-color: rgb(74, 89, 214, 0.9);
+  color: whitesmoke;
+  height: 280px;
+  width: 600px;
+  font-size: 25px;
+  padding: 20px 20px 20px 20px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-left: 240px;
+}
+.hiring
+{
+  background-color: rgb(74, 89, 214, 0.9);
+  color: whitesmoke;
+  height: 280px;
+  width: 600px;
+  font-size: 25px;
+  padding: 20px 20px 20px 20px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-left: 300px;
+}
+.contributor
+{
+  background-color: rgb(74, 89, 214, 0.9);
+  color: whitesmoke;
+  height: 280px;
+  width: 600px;
+  font-size: 25px;
+  padding: 20px 20px 20px 20px;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+#Contributor
+{
+  margin-left: 30px;
+}
+
+/* section 4 */
+#top-contributors
+{
+  background-color: rgba(255, 204, 204, 0.4);
+  height: 600px;
+}
+.title
+{
+    color: black;
+    margin-top: 40px;
+    padding-top: 40px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+#box-service
+{
+    display: flex;
+}
+.service
+{
+   background-color: rgb(255, 204, 204, 0.9);
+   box-shadow: whitesmoke;
+   border-radius: 10%;
+   margin-left: 50px;
+   width: 260px;
+   height: 300px;
+   padding-left: 30px;
+   line-height: 1.5;
+   list-style: disc;
+   font-size: 15px;
+   margin-top: 100px;
+}
+.job-li
+{
+    list-style: square;
+    margin-left: 20px;
+}
+
+/* section 5 */
+.suggestions-sec
+{
+  height: 1000px;
+}
+.suggestions-form
+{
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#suggestions-div
+{
+  height: 40px;
+  background-color: rgb(74, 89, 214, 0.9);
+  border-color: rgb(74, 89, 214, 0.9);
+  color: whitesmoke;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 70%;
+}
+#suggestions
+{
+  height: 150px;
+  background-color: rgb(74, 89, 214, 0.6);
+  border-color: rgb(74, 89, 214, 0.6);
+  color: white;
+  padding-top: -100px;
+  padding-left: 20px;
+  width: 70%;
+}
+
+/*  ===== FOOTER ======  */
+.row
+{
+  display: flex;
+  flex-direction: row;
+  padding-right: 40px;
+}
+.footer-dark {
+  padding:50px 0;
+  color: white;
+  background-color: rgb(20, 31, 115, 1);;
+  height: 400px;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+.item
+{
+  width: 300px;
+  margin-left: 60px;
+  margin-right: 50px;
+  margin-top: 30px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/*  ===== MEDIA QUERIES ======  */
+@media screen and (max-width: 768px) {
+  /*  ===== BASE ======  */
+  .container {
+    padding: 0.8rem 0.5rem;
+  }
+  /*  ===== HEADER ======  */
+  header {
+    padding: 0.8rem 0.5rem;
+  }
+  .menu-icons {
+    display: block;
+  }
+  .nav-bar {
+    background-color: var(--orange-color);
+    border-top-left-radius: 5px;
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform 300ms;
+    z-index: 1;
+  }
+  .show-menu {
+    transform: scalex(1);
+  }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .nav-item {
+    margin: 0.8rem 2rem;
+  }
+  .nav-link {
+    background-image: none;
+    color: var(--primary-clr);
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+  .nav-link::before {
+    background-color: var(--primary-clr);
+  }
+  /*  ===== BODY ========  */
+  .home_img {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) {
+  header {
+    padding: 1.2rem 1.5rem;
+  }
+  /*  ===== BODY ========  */
+  .slogan {
+    padding: 0 1.5rem;
+  }
+  .slogan .slogan-title {
+    font-size: 2.2rem;
+    max-width: 38rem;
+  }
+  .slogan .slogan-text {
+    font-size: 1.15rem;
+    margin-top: 1.3rem;
+    max-width: 30rem;
+    line-height: 1.5rem;
+  }
+  .hero-btn {
+    width: 300px;
+    padding: 0.8rem 0;
+    border-radius: 5rem;
+    margin-top: 3rem;
+  }
+  .home-btn-link {
+    font-size: 1.3rem;
+  }
+  /* services */
+  .services-container {
+    column-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    padding: 1.2rem 5rem;
+  }
+  /*  ===== BODY ========  */
+  .section_1 {
+    padding: 0 5rem;
+    height: 80vh;
+  }
+  .slogan {
+    margin-top: 8rem;
+  }
+  .slogan .slogan-title {
+    font-size: 3rem;
+  }
+  .hero-btn {
+    width: 280px;
+    margin-top: 1.8rem;
+  }
+  .home-btn-link {
+    font-size: 1.2rem;
+  }
+  /* - About - */
+  .section_2 {
+    height: 100vh;
+    background-color: var(--primary-clr);
+    position: relative;
+  }
+  .about {
+    background: linear-gradient(
+      -45deg,
+      hsla(0, 0%, 94%, 0.1),
+      hsla(0, 0%, 94%, 0.3)
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: thin solid rgb(239, 239, 239, 0.6);
+    padding-top: 0px;
+    padding-left: 20px;
+    position: absolute;
+    height: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20rem;
+    z-index: 1;
+  }
+  .about-container img {
+    display: block;
+    position: absolute;
+    max-width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  .about .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .feature_desc {
+    font-size: 1.05rem;
+    letter-spacing: 0.05rem;
+    opacity: 0.8;
+    max-width: 25rem;
+    line-height: 1.3rem;
+  }
+  /* section 3 */
+  .services {
+    margin: 3rem 0;
+  }
+  .service-title {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  .service span {
+    top: 1.5rem;
+    left: 1.3rem;
+  }
+  .service-description {
+    font-size: 0.9rem;
+  }
+  .services-container {
+    row-gap: 5rem;
+    column-gap: 1rem;
+    place-items: end;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  /* section 4 */
+  .section_4 {
+    display: block;
+    margin: 3rem 0;
+  }
+  .glide_slides {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .babysitter {
+    height: 80%;
+    margin-right: 1.5rem;
+  }
+  .babysitter img {
+    width: 25%;
+  }
+  .baby-sitter-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .baby-sitter-story {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin: 0rem 0 0.2rem 0;
+    line-height: 1.5rem;
+  }
+  /* section 5 */
+  .section_5 {
+    margin: 2rem 0;
+  }
+  .testimonials-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .testimony {
+    margin: 0;
+  }
+  .testimony img {
+    width: 20%;
+  }
+  .tester-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .testimony-text {
+    font-size: 0.91rem;
+    opacity: 0.8;
+  }
+  /* footer */
+  .top-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .address-text,
+  .phone-text,
+  .email-text {
+    font-size: 0.9rem;
+  }
+}
+  </style>
+<head>
+    <title>homepage</title>
+</head>
+<body>
+  <!-- ===== HEADER ====== -->
+  <div class="hero">
+    <header>
+      <!-- logo -->
+      <a class="logo" href="#hero">M</a>
+      <h1 style="color: white;">EduXNT</h1>
+      <!-- navbar -->
+      <nav class="nav-bar">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#hero" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="#Learner" class="nav-link">LEARNER</a></li>
+          <li class="nav-item"><a href="#Contributor" class="nav-link">CONTRIBUTOR</a></li>
+          <li class="nav-item"><a href="#Hiring" class="nav-link">HIRING</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icons">
+        <i class="bx bx-menu"></i>
+        <i class="bx bx-x"></i>
+      </div>
+    </header>
+    <!-- ===== BODY ====== -->
+    <!-- home section -->
+    <section id="hero" class="section_1 home container">
+      <div class="slogan">
+        <h1 class="slogan-title">YOUR CAREER IS OUR PRIORITY</h1>
+        <p class="slogan-text">Break into a new field like information technology or data science. No prior experience necessary to get started.
+            Choose from over 100 courses in topics like business analytics, graphic design, Python, and more.
+            </p>
+        <div id="links-login">
+        <div id="signup"><a href="./login" class="nav-link" >LOGIN</a></div>
+        <div id="signup"><a href="./signup" class="nav-link">SIGNUP</a></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- about us section -->
+  <section id="about-us" class="section_2 about-us">
+    <div class="about-container">
+      <div class="about">
+        <h2 class="about-title title">about us</h2>
+        <div class="about-text-container">
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">We have built a website where students can get access to various courses and even find opportunities related to their desired fields .
+            </p>
+          </div>
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">We have created the platform in such a way that all can put their resources and all can benefit from them .
+            </p>
+          </div>
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">Our basic driving force remains the fact that “ education is a river and should be accessible for all”.</p>
+          </div>
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">Get your hands on over 100 courses and study materials.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about image -->
+      <img src="https://sharpsheets.io/blog/wp-content/uploads/2021/10/mobile-app-development-guide-scaled-1.jpeg" id="sec2-img">
+    </div>
+  </section>
+  
+  <section>
+    <div class="section_role">
+      <div class="role-div">
+        <h2 id="Learner" class="role-title">LEARNER</h2>
+        <div class="learner">
+          <p>Get your hands over hundreds of courses of your choice and grab knowledge in them .Be the master of your own by starting to learn .</p>
+        </div>
+      </div>
+      <div class="role-div" id="role-div-mid">
+        <div class="contributor">
+          <p>Anyone who wants to share his/her experience in a particular field and is willing to share relevant resources are welcome in this section.
+             You can answer thousands of questions and help those who have doubts regarding the course or any other stuff.
+          </p>
+        </div>
+        <h2 id="Contributor" class="role-title">CONTRIBUTOR</h2>
+      </div>
+      <div class="role-div">
+        <h2 id="Hiring" class="role-title">HIRING</h2>
+        <div class="hiring">
+          <p>Here you can find various opportunities and apply for the same according to your skills and interest.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- top contributors -->
+  <section>
+    <div id="top-contributors">
+      <h2 class="title">Top Contributors</h2>
+      <div id="box-service">  
+       <div class="service">
+          <h2 class="service-title">Rajesh Verma</h2><br>
+          <ul class="job-ul">
+              <li class="job-li">Web Developer</li>
+              <li class="job-li">Placed at Google</li>
+              <li class="job-li">Full Stack Development, Machine Learning  </li>
+          </ul>
+        </div>
+        <div class="service">
+          <h2 class="service-title">Kartik Rohilla</h2><br>
+          <ul class="job-ul">
+            <li class="job-li">2nd Year Student at Delhi Technological University</li>
+              <li class="job-li">Full-Stack Development, Html5, CSS, C++, Game development</li>
+              <li class="job-li">Worked on more than 5 Projects</li>
+          </ul>
+        </div>
+        <div class="service">
+          <h2 class="service-title">Love Jain</h2><br>
+          <ul class="job-ul">
+              <li class="job-li">2nd Year Student at Delhi Technological University</li>
+              <li class="job-li">MySQL, C++, Front-End Development, Cloud Computing</li>
+              <li class="job-li">Worked on more than 5 projects</li>
+          </ul>
+        </div>
+        <div class="service">
+          <h2 class="service-title">Jasvinder kaur</h2><br>
+          <ul class="job-ul">
+              <li class="job-li">USIP Intern at Delhi Technological University</li>
+              <li class="job-li">Pursuing Bachelor of Technology in Software Engineering from Delhi Technological University</li>
+              <li class="job-li">Html, CSS, C++, C, Data Structure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- suggestions section -->
+  <section id="suggestions-sec">
+    <form class="suggestions-form">
+      <div id="suggestions-div">
+      <label id="suggestions-label" for="suggestions">Tell us what you want to improve</label>
+      </div>
+      <input type="text" id="suggestions" placeholder="Enter your suggestion here...">
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ====== -->
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 item text">
+                    <h3>About</h3>
+                    <p>"You desire we serve, learning in a new whole way"</p>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Owners</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/jasvinder-kaur-0879b4203/" target="_blank">Jasvinder Kaur</a></li>
+                        <li><a href="https://www.linkedin.com/in/kartik-rohilla-1a078020b" target="_blank">Kartik Rohilla</a></li>
+                        <li><a href="https://www.linkedin.com/in/love-jain-36a5bb200/" target="_blank">Love Jain</a></li>
+                        <li><a href="https://www.linkedin.com/in/himanshu-tanwar-b92b38228/" target="_blank">Himanshu Tanwar</a></li>
+                    </ul>
+                </div><br>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Contact Details</h3>
+                    <ul>
+                        <li><a href="#">EduXNT@gmail.com</a><br><a href="#">jasvinderkaur927@gmail.com</a></li>
+                        <li><a href="#">8800477533</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+            <p class="copyright">Copyright © 2022 with by EduXNT</p>
+        </div>
+    </footer>
+  </div>
+  <script>
+    "use strict";
+
+const navbar = document.querySelector(".nav-bar");
+
+const openMenu = document.querySelector(".bx-menu");
+const closeMenu = document.querySelector(".bx-x");
+
+// Open menu
+
+openMenu.addEventListener("click", (e) => {
+if (e.target.classList.contains("bx-menu")) {
+  navbar.classList.add("show-menu");
+  openMenu.classList.add("hide-icon");
+  closeMenu.classList.add("show-icon");
+}
+});
+
+// CLose menu
+
+closeMenu.addEventListener("click", (e) => {
+if (e.target.classList.contains("bx-x")) {
+  navbar.classList.remove("show-menu");
+  openMenu.classList.remove("hide-icon");
+  closeMenu.classList.remove("show-icon");
+}
+});
+  </script>
+
+</body>
+</html>

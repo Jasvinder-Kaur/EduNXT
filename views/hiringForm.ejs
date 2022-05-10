@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Hiring Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #div-title {
+            width: 100%;
+            background: rgba(27, 27, 50, 0.8);
+            padding: 10px;
+            margin-top: 20px;
+
+        }
+
+        body {
+            min-height: 150vh;
+            background-image: url(https://www.randstadrisesmart.com/sites/default/files/migrated_images/decoding_the_hiring_process.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        #title,
+        #description {
+            text-align: center;
+            color: white;
+        }
+
+        #title {
+            font-size: 50px;
+        }
+
+        #description {
+            font-style: italic;
+            font-size: 18px;
+        }
+
+        #survey-form {
+
+            border-radius: 10px;
+            box-shadow: 1px 2px 13px 9px yellow;
+            background: #292A33;
+            width: 400px;
+            padding: 30px;
+            margin: auto;
+            color: white;
+            margin-top: 20px;
+
+
+        }
+
+
+        #email,
+        #name,
+        #number {
+            width: 100%;
+            background: #292A33;
+            border: 1px solid yellow;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        #dropdown {
+            border-radius: 5px;
+            background: #70727D;
+            color: white;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        #p-questions {
+            padding: 10px;
+            font-size: 15px;
+            margin-bottom: 5px;
+            margin-left: -10px;
+
+        }
+
+
+        #botones-verif,
+        #input-checkbox {
+            display: inline-block;
+            font-size: 15px;
+            padding: 10px;
+            margin-bottom: 15px;
+
+
+
+        }
+
+        textarea {
+            width: 100%;
+            height: 50px;
+        }
+
+        #submit {
+            width: 100%;
+            color: black;
+            background-color: #2DBF3C;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <main>
+        <div id="div-title">
+            <h1 id="title">Post Jobs</h1>
+            <p id="description">What you want as a Recruiter</p>
+        </div>
+        <form id="survey-form">
+            <label id="name-label" for="name">Company Name</label>
+            <input id="name" type="text" placeholder="Write your name" required>
+
+            <label id="email-label" for="email">Official Email</label>
+            <input id="email" type="email" placeholder="Write your email">
+
+            <p id="p-questions">Minimum Experience Required</p>
+            <select id="dropdown" required>
+                <option disabled selected value>Select</option>
+                <option value="01">1 year</option>
+                <option value="02">2 Years</option>
+                <option value="03">3 Years</opction>
+            </select>
+
+            <p id="p-questions">Skill Required</p>
+            <label aria-required="true">
+                <input id="botones-verif" type="radio" name="recomendacion" value="01">Front-End Developer</input><br>
+                <input id="botones-verif" type="radio" name="recomendacion" value="02"> Back-End Developer</input><br>
+                <input id="botones-verif" type="radio" name="recomendacion" value="03"> Full Stack Developer</input><br>
+                <input id="botones-verif" type="radio" name="recomendacion" value="04"> Graphic Designer</input><br>
+                <input id="botones-verif" type="radio" name="recomendacion" value="05"> Data Scientist</input><br>
+                <input id="botones-verif" type="radio" name="recomendacion" value="06"> Video Editor</input>
+
+            </label> <br>
+
+            <label id="name-label" for="name">Salary</label>
+            <input id="name" type="text" placeholder="In Rupees" required>
+
+            <p id="p-questions">Add a suggestion (optional)</p>
+            <textarea name="comment" placeholder="Write your comment here..."></textarea>
+            <input id="submit" type="submit" value="Send">
+        </form>
+    </main>
+    <script>
+
+    </script>
+</body>
+
+</html>

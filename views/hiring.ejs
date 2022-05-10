@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hiring</title>
+  <link href="hiring.css" rel="stylesheet">
+  <!-- <script src="Hiring.js"></script> -->
+  <style>
+    /*  ===== EXTERNAL LINKS ======  */
+
+    /* Montserrat font family */
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+
+    /*  ===== VARIABLE ======  */
+    :root {
+      --primary-clr: hsl(237, 20%, 43%);
+      --second-clr: hsl(257, 21%, 50%);
+      --primary-clr-alt: rgb(150, 139, 179);
+      --white-clr: hsl(260, 60%, 99%);
+      --light-indigo-clr: hsl(277, 82%, 96%);
+      --pink-clr: hsl(306, 26%, 84%);
+      --orange-color: hsl(12, 100%, 72%);
+      --light-green-clr: hsl(171, 40%, 86%);
+    }
+
+    /*  ===== BASE ======  */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 1.2rem 2rem;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    body {
+      font-family: "Montserrat", "Avenir", sans-serif;
+      background-color: var(--white-clr);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /*  ===== HEADER ======  */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--white-clr);
+    }
+
+    .nav-items {
+      display: flex;
+    }
+
+    .nav-item {
+      margin-left: 1.5rem;
+    }
+
+    .nav-link {
+      position: relative;
+      text-decoration: none;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      color: rgb(239, 239, 239);
+    }
+
+    .nav-link::before {
+      content: "";
+      background-color: var(--orange-color);
+      height: 0.2rem;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 300ms;
+    }
+
+    .nav-link:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .menu-icons {
+      display: none;
+    }
+
+    .bx-menu,
+    .bx-x {
+      cursor: pointer;
+      font-size: 2.5rem;
+      color: var(--white-clr);
+    }
+
+    .bx-x {
+      display: none !important;
+    }
+
+    .hide-icon {
+      display: none !important;
+    }
+
+    .show-icon {
+      display: block !important;
+    }
+
+    /*  ===== BODY ========  */
+    .hero {
+      background: url("https://www.roberthalf.com/sites/default/files/2020-05/how-to-hire-an-employee-roberthalf.jpg");
+      height: 1000px;
+      background-size: 100%;
+      background-position: initial;
+      background-repeat: no-repeat;
+    }
+
+    .section_1 {
+      height: 100vh;
+    }
+
+    .slogan {
+      margin-top: 3rem;
+    }
+
+    .slogan .slogan-title {
+      color: rgb(239, 239, 239);
+      font-size: 2rem;
+      letter-spacing: 0.01rem;
+      max-width: 30rem;
+    }
+
+    .slogan .slogan-text {
+      color: var(--white-clr);
+      color: rgb(226, 226, 226);
+      font-size: 1.2rem;
+      letter-spacing: 0.02rem;
+      margin: 1rem 0;
+      max-width: 28rem;
+    }
+
+    .hero-btn {
+      cursor: pointer;
+      background-color: hsla(199, 57%, 52%, 0.822);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      padding: 0.8rem 0;
+      border-radius: 5rem;
+      margin-top: 2rem;
+      transition: background-color 300ms;
+    }
+
+    .hero-btn:hover,
+    .hero-btn:focus {
+      background-color: hsl(12, 100%, 72%);
+    }
+
+    .home-btn-link {
+      color: var(--white-clr);
+      text-decoration: none;
+      font-size: 1.1rem;
+      /* pointer-events: none; */
+    }
+
+    /* - About - */
+    .about-container img {
+      display: none;
+    }
+
+    .about {
+      padding: 2rem 1rem;
+      background-color: var(--primary-clr);
+    }
+
+    .about .about-title {
+      text-transform: capitalize;
+      color: var(--white-clr);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .bx-check-circle {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      color: var(--white-clr);
+    }
+
+    .feature_desc {
+      color: var(--white-clr);
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
+      opacity: 0.8;
+      max-width: 30rem;
+      line-height: 1.5rem;
+    }
+
+    /* section 3 */
+
+    .title {
+      color: hsl(237, 20%, 43%);
+      margin-top: 20px;
+    }
+
+    #box-service {
+      display: flex;
+      margin-left: 8pc;
+    }
+
+    .service {
+      background-color: rgb(196, 210, 236);
+      border-radius: 10%;
+      margin-left: 50px;
+      width: 260px;
+      height: 260px;
+      padding-left: 30px;
+      line-height: 1.5;
+      list-style: disc;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+
+    .job-li {
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    /* section 4 */
+    .section_4 {
+      background-color: var(--light-indigo-clr);
+      /* background-image: url("https://raw.githubusercontent.com/r-e-d-ant/Babysitter-center-landing-page/8e5d8cc959f1cd34712ed196f6ea3676b7ab5929/assets/img/flowers.svg"); */
+      background-size: 35rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bby_sitter_title {
+      color: var(--primary-clr);
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+      max-width: 15rem;
+      position: relative;
+      padding: 0.9rem 0;
+    }
+
+    .bby_sitter_title::before {
+      content: "";
+      height: 0.2rem;
+      width: 7rem;
+      background-color: var(--orange-color);
+      position: absolute;
+      bottom: 0;
+    }
+
+    .babysitter {
+      margin: 3rem 0;
+      max-width: 20rem;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background: linear-gradient(-45deg,
+          hsla(0, 0%, 94%, 0.1),
+          hsla(0, 0%, 94%, 0.3));
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
+      border: thin solid rgb(255, 255, 255);
+    }
+
+    .babysitter img {
+      width: 25%;
+      margin-bottom: 1rem;
+    }
+
+    .baby-sitter-name {
+      color: var(--primary-clr);
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+
+    .heart {
+      margin-top: 0.3rem;
+    }
+
+    .baby-sitter-story {
+      color: var(--primary-clr);
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      max-width: 20rem;
+      margin: 0.5rem 0 0.2rem 0;
+    }
+
+    /* section 5 */
+    .section_5 {
+      background-image: url("https://brandinginnovation.com/wp-content/uploads/2018/01/review-background-1.jpg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      margin: 2rem auto;
+    }
+
+    .testimony {
+      margin: 3rem 0;
+      padding: 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background: linear-gradient(-45deg,
+          hsla(0, 0%, 94%, 0.1),
+          hsla(0, 0%, 94%, 0.3));
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
+      border: thin solid rgb(255, 255, 255);
+    }
+
+    .testimonials-title {
+      color: var(--primary-clr);
+      max-width: 21rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      position: relative;
+      padding-bottom: 0.9rem;
+      margin-bottom: 3rem;
+      letter-spacing: 0.05rem;
+    }
+
+    .testimonials-title::before {
+      content: "";
+      height: 0.2rem;
+      width: 17.5rem;
+      background-color: var(--orange-color);
+      position: absolute;
+      bottom: 0;
+    }
+
+    .testimony img {
+      width: 25%;
+      margin-bottom: 1rem;
+    }
+
+    .tester-name {
+      color: var(--primary-clr);
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+
+    .testimony-text {
+      color: var(--primary-clr);
+      font-size: 1.1rem;
+      line-height: 1.6rem;
+      max-width: 20rem;
+      margin: 1.2rem 0 2rem 0;
+    }
+
+    /*  ===== FOOTER ======  */
+    footer {
+      background-image: url("https://raw.githubusercontent.com/r-e-d-ant/Babysitter-center-landing-page/8e5d8cc959f1cd34712ed196f6ea3676b7ab5929/assets/img/wave.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+    }
+
+    .top-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-title {
+      color: var(--white-clr);
+      font-size: 4rem;
+      font-weight: 400;
+      padding-top: 7rem;
+    }
+
+    .footer-element {
+      display: flex;
+      align-items: center;
+      margin: 2rem 0;
+    }
+
+    .bx-home,
+    .bx-phone,
+    .bx-envelope {
+      color: var(--white-clr);
+      font-size: 1.1rem;
+      margin-right: 1rem;
+    }
+
+    .address-text,
+    .phone-text,
+    .email-text {
+      color: var(--white-clr);
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .mapouter {
+      position: relative;
+      text-align: right;
+    }
+
+    .gmap_canvas {
+      overflow: hidden;
+      background: none !important;
+      border-radius: 50%;
+    }
+
+    .end-footer {
+      background-color: rgb(88, 90, 133);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .copy {
+      color: var(--white-clr);
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+      opacity: 0.8;
+    }
+
+    .designer {
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+      color: #9ed3ff;
+      opacity: 0.5;
+      transition: 300ms color, 300ms opacity;
+    }
+
+    .designer:hover {
+      text-decoration: none;
+      color: #51b1ff;
+      opacity: 1;
+    }
+
+    /*  ===== MEDIA QUERIES ======  */
+    @media screen and (max-width: 768px) {
+
+      /*  ===== BASE ======  */
+      .container {
+        padding: 0.8rem 0.5rem;
+      }
+
+      /*  ===== HEADER ======  */
+      header {
+        padding: 0.8rem 0.5rem;
+      }
+
+      .menu-icons {
+        display: block;
+      }
+
+      .nav-bar {
+        background-color: var(--orange-color);
+        border-top-left-radius: 5px;
+        width: 80%;
+        height: 100vh;
+        position: absolute;
+        top: 4.5rem;
+        right: 0;
+        transform: scalex(0);
+        transform-origin: right;
+        transition: transform 300ms;
+        z-index: 1;
+      }
+
+      .show-menu {
+        transform: scalex(1);
+      }
+
+      .nav-items {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+      }
+
+      .nav-item {
+        margin: 0.8rem 2rem;
+      }
+
+      .nav-link {
+        background-image: none;
+        color: var(--primary-clr);
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+
+      .nav-link::before {
+        background-color: var(--primary-clr);
+      }
+
+      /*  ===== BODY ========  */
+      .home_img {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 481px) {
+      header {
+        padding: 1.2rem 1.5rem;
+      }
+
+      /*  ===== BODY ========  */
+      .slogan {
+        padding: 0 1.5rem;
+        margin-left: 50pc;
+      }
+
+      .slogan .slogan-title {
+        font-size: 2.2rem;
+        max-width: 38rem;
+      }
+
+      .slogan .slogan-text {
+        font-size: 1.15rem;
+        margin-top: 1.3rem;
+        max-width: 30rem;
+        line-height: 1.5rem;
+      }
+
+      .hero-btn {
+        width: 300px;
+        padding: 0.8rem 0;
+        border-radius: 5rem;
+        margin-top: 3rem;
+      }
+
+      .home-btn-link {
+        font-size: 1.3rem;
+      }
+
+      /* services */
+      .services-container {
+        column-gap: 1rem;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      header {
+        padding: 1.2rem 5rem;
+      }
+
+      /*  ===== BODY ========  */
+      .section_1 {
+        padding: 0 5rem;
+        height: 80vh;
+      }
+
+      .slogan {
+        margin-top: 8rem;
+      }
+
+      .slogan .slogan-title {
+        font-size: 3rem;
+      }
+
+      .hero-btn {
+        width: 280px;
+        margin-top: 1.8rem;
+      }
+
+      .home-btn-link {
+        font-size: 1.2rem;
+      }
+
+      /* - About - */
+      .section_2 {
+        height: 100vh;
+        background-color: var(--primary-clr);
+        position: relative;
+      }
+
+      .about {
+        background: linear-gradient(-45deg,
+            hsla(0, 0%, 94%, 0.1),
+            hsla(0, 0%, 94%, 0.3));
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border-radius: 10px;
+        border: thin solid rgb(239, 239, 239, 0.6);
+        padding: 2rem 1.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20rem;
+        z-index: 1;
+      }
+
+      .about-container img {
+        display: block;
+        position: absolute;
+        max-width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+
+      .about .about-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .feature_desc {
+        font-size: 1.05rem;
+        letter-spacing: 0.05rem;
+        opacity: 0.8;
+        max-width: 25rem;
+        line-height: 1.3rem;
+      }
+
+      /* section 3 */
+      .services {
+        margin: 3rem 0;
+      }
+
+      .service-title {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+      }
+
+      .service span {
+        top: 1.5rem;
+        left: 1.3rem;
+      }
+
+      .service-description {
+        font-size: 0.9rem;
+      }
+
+      .services-container {
+        row-gap: 5rem;
+        column-gap: 1rem;
+        place-items: end;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      /* section 4 */
+      .section_4 {
+        display: block;
+        margin: 3rem 0;
+      }
+
+      .glide_slides {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .babysitter {
+        height: 80%;
+        margin-right: 1.5rem;
+      }
+
+      .babysitter img {
+        width: 25%;
+      }
+
+      .baby-sitter-name {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+
+      .baby-sitter-story {
+        font-size: 0.95rem;
+        opacity: 0.8;
+        margin: 0rem 0 0.2rem 0;
+        line-height: 1.5rem;
+      }
+
+      /* section 5 */
+      .section_5 {
+        margin: 2rem 0;
+      }
+
+      .testimonials-container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .testimony {
+        margin: 0;
+      }
+
+      .testimony img {
+        width: 20%;
+      }
+
+      .tester-name {
+        font-size: 1.4rem;
+        font-weight: 400;
+      }
+
+      .testimony-text {
+        font-size: 0.91rem;
+        opacity: 0.8;
+      }
+
+      /* footer */
+      .top-footer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .address-text,
+      .phone-text,
+      .email-text {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ====== -->
+  <div class="hero">
+    <header>
+      <!-- logo -->
+      <a class="logo" href="#hero">🤝</a>
+      <!-- navbar -->
+      <nav class="nav-bar">
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#hero" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="#about-us" class="nav-link">ABOUT</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">JOBS</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">REVIEWS</a></li>
+          <li class="nav-item"><a href="#footer" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icons">
+        <i class="bx bx-menu"></i>
+        <i class="bx bx-x"></i>
+      </div>
+    </header>
+    <!-- ===== BODY ====== -->
+    <!-- home section -->
+    <section id="hero" class="section_1 home container">
+      <div class="slogan">
+        <h1 class="slogan-title">Find Opportunities</h1>
+        <p class="slogan-text">Apply for the same according to your Skills and Interest.
+        </p>
+        <div class="hero-btn" style="display: inline; padding: 10px 40px;"><a href="#services" class="home-btn-link"
+            _blank>Job Seeker</a></div>
+        <div class="hero-btn" style="display: inline; margin-left: 20px; padding: 10px 40px;"><a
+            href="./hiringForm" class="home-btn-link">Post Job</a></div>
+
+      </div>
+    </section>
+  </div>
+
+  <div class="hid" hidden="false">
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Lato', sans-serif;
+      }
+
+      #div-title {
+        width: 100%;
+        background: rgba(27, 27, 50, 0.8);
+        padding: 10px;
+        margin-top: 20px;
+
+      }
+
+      body {
+        min-height: 150vh;
+        background-image: url(https://www.randstadrisesmart.com/sites/default/files/migrated_images/decoding_the_hiring_process.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+
+      #title,
+      #description {
+        text-align: center;
+        color: white;
+      }
+
+      #title {
+        font-size: 50px;
+      }
+
+      #description {
+        font-style: italic;
+        font-size: 18px;
+      }
+
+      #survey-form {
+
+        border-radius: 10px;
+        box-shadow: 1px 2px 13px 9px yellow;
+        background: #292A33;
+        width: 400px;
+        padding: 30px;
+        margin: auto;
+        color: white;
+        margin-top: 20px;
+
+
+      }
+
+
+      #email,
+      #name,
+      #number {
+        width: 100%;
+        background: #292A33;
+        border: 1px solid yellow;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      #dropdown {
+        border-radius: 5px;
+        background: #70727D;
+        color: white;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      #p-questions {
+        padding: 10px;
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-left: -10px;
+
+      }
+
+
+      #botones-verif,
+      #input-checkbox {
+        display: inline-block;
+        font-size: 15px;
+        padding: 10px;
+        margin-bottom: 15px;
+
+
+
+      }
+
+      textarea {
+        width: 100%;
+        height: 50px;
+      }
+
+      #submit {
+        width: 100%;
+        color: black;
+        background-color: #2DBF3C;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 15px;
+
+      }
+    </style>
+
+  </div>
+
+
+
+
+  <!-- about us section -->
+  <section id="about-us" class="section_2 about-us">
+    <div class="about-container">
+      <div class="about">
+        <h2 class="about-title title">About</h2>
+        <div class="about-text-container">
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">Welcome to the most exciting feature of our website where you come across
+              intern/full -time job opportunities in fields of your choice</p>
+          </div>
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">Contributors can put up their requirements and others can apply according to that.
+            </p>
+          </div>
+          <div class="feature-1 feature">
+            <i class="bx bx-check-circle"></i>
+            <p class="feature_desc">Here you can find various opportunities and apply for the same according to your
+              skills and interest.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about image -->
+      <img
+        src="https://images.moneycontrol.com/static-mcnews/2021/03/%E2%80%8FHiring-770x433.jpg?impolicy=website&width=770&height=431">
+    </div>
+  </section>
+  <!-- services section -->
+  <section id="services">
+    <h2 class="title" style="margin-left: 11pc;">Recently Added Jobs</h2>
+    <div id="box-service">
+      <div class="service">
+        <h2 class="service-title">Full Stack Developer</h2>
+        <h4 class="company-name">BY TURING</h4><br>
+        <ul class="job-ul">
+          <li class="job-li">Salary: 60K/month</li>
+          <li class="job-li">Place: Noida</li>
+          <li class="job-li">Part-time</li>
+        </ul>
+        <br>
+        <ol>
+          <li>Contact: 9893289349</li>
+          <li>Mail: turing@gmail.com</li>
+        </ol>
+      </div>
+
+      <div class="service">
+        <h2 class="service-title">Data Scientist</h2>
+        <h4 class="company-name">BY CERN</h4><br>
+        <ul class="job-ul">
+          <li class="job-li">Salary: 500K/month</li>
+          <li class="job-li">Place: London, England</li>
+          <li class="job-li">Full-time</li>
+        </ul>
+        <br>
+        <ol>
+          <li>Contact: 9893289349</li>
+          <li>Mail: cernscientist@gmail.com</li>
+        </ol>
+      </div>
+      <div class="service">
+        <h2 class="service-title">PHP Programmer</h2>
+        <h4 class="company-name">BY PAYPAL</h4><br>
+        <ul class="job-ul">
+          <li class="job-li">Salary: 70-80K/month</li>
+          <li class="job-li">Place: Gurugaon/li>
+          <li class="job-li">Full-time, Part-time</li>
+        </ul>
+        <br>
+        <ol>
+          <li>Contact: 9893289349</li>
+          <li>Mail: paypal@gmail.com</li>
+        </ol>
+      </div>
+      <div class="service">
+        <h2 class="service-title">Senior Full Stack Developer</h2>
+        <h4 class="company-name">BY SHARECHAT</h4><br>
+        <ul class="job-ul">
+          <li class="job-li">Salary: 500K/month</li>
+          <li class="job-li">Place: Delhi</li>
+          <li class="job-li">Full-time</li>
+        </ul>
+        <ol>
+          <li>Contact: 9893289349</li>
+          <li>Mail: sharechat@gmail.com</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section id="babysitters" class="section_4 babysitters container">
+    <div class="sub__container">
+      <h2 class="bby_sitter_title">TOP COMPANIES</h2>
+      <div class="glide_slides">
+        <div class="babysitter bb1 glide_slide">
+          <img
+            src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500"
+            alt="babysitter profile picture" class="profile">
+          <h2 class="baby-sitter-name">YOUTUBE</h2>
+          <!-- <img src="https://github.com/r-e-d-ant/Babysitter-center-landing-page/blob/main/assets/img/hearts.svg?raw=true" class="heart" alt=""> -->
+          <span class="heart"></span>
+          <p class="baby-sitter-story">YouTube is an American online video sharing and social media platform owned by
+            Google. It was launched on February 14, 2005, by Steve Chen, Chad Hurley, and Jawed Karim. It is the second
+            most visited website, right after Google itself.</p>
+        </div>
+
+        <div class="babysitter glide_slide">
+          <img src="https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg"
+            alt="babysitter profile picture" class="profile">
+          <h2 class="baby-sitter-name">GOOGLE</h2>
+          <!-- <img src="https://github.com/r-e-d-ant/Babysitter-center-landing-page/blob/main/assets/img/hearts.svg?raw=true" class="heart" alt=""> -->
+          <span class="heart"></span>
+          <p class="baby-sitter-story">Google LLC is an American multinational technology company that specializes in
+            Internet-related services and products, which include online advertising technologies, a search engine,
+            cloud computing, software, and hardware.</p>
+        </div>
+
+        <div class="babysitter glide_slide">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8ODg4AAAAICAjh4eF9fX0zMzNOTk7X19cqKiphYWGsrKwKCgr7+/vm5uZ0dHS8vLzu7u5DQ0OdnZ3Nzc1TU1OTk5O/v7+GhoZJSUl5eXlYWFi2trZmZmbx8fEmJiZubm45OTkeHh4YGBjIyMijo6Ourq6YmJiDg4OqYIa4AAAEDUlEQVR4nO3cWWOiMBQFYLmIomLdWxds1S76/3/hAC4VSpxOPc690vM985AjCTcJkVqNiIiIiIiIiIiIiIiIiIiIiIiIiIiIiOiXCTtBoN2GGxr3JPGi3Yyb6bdEIs/zX7UbciNhQ8RLSUO7KbexO+RLEja123ILz41jviThXLs1N1CXz4CevGs3B68uvneWMNRuD9xzLmAk2u3Ba5110UoOwyAXsIKdNCwEbGk3CK5RSNjXbhBavxCwehOaVtVH4bgQsHorp16+UlTvMVNLl0snvgy02wOXKxW+1LXbg9c5n3FXMWCyKjwbg9Xroon2adlbwadoZnHYuJBh5ergwUL8dHdtMdZuyM2s5HUYxM/azaDvCePRNAge4wsDrt4Jmpuk067b0/jOKsfgvSmf2nG35JqnbL9b/CiK9pfN3/57O3/qLY33WdnTAMtC68OdSG4Ct79sVPZTmDNuSH79sC8P0fZU4LudRjHeKaT9ncVuuyTffhIqs04y2Ab9pTguyTK2jA/Isbvx6Y3cc1+RXfShHeKSUWnn+0cy1Y7hFly+Pd+OaHbKCgqYRHzUjlJuiwqYRDRZGp9wAZPHjcHC+Ix4yBwDvlgsGU1gH11qhynTBwa0WS1yrwSvC2jzQfoOu4Wy085SDnYLZaIdpRysUvgWy0RqApvNmCz1aS1EBWxrR3H4gCW0ug2+BCWUlXYSF9SEzewL4QfQLfQ32klcULXC6GymhlsYitm3GT1UQqPVHrZwijztIE4bzKRUZtpBnEDFwubCN4NK2NMO4lT5GQ0soeFeCko41A7iBBqHhg98+6iJt9mKv678rG1R+Zk36p2T3dOmI9gmhsXXFSnYXqLV3eBaHbfhbfVpikto9f02qlzYHYk7XEKjj1Pky0Ob/2QbIF/h2zz3BdrH2EfsaKcpMwXeRE9G2nFKvCET2tzOAB41SSMaPKC4gt5ET2RqbXaD7aZZRmtLKWw39QzuD0OfplnCWDtSAW59cUxobSDWZuBnjb2KgTx86dl84f0KnLl5staOU6IDnbk9accpgzueaPXMAvAmmisVB7CRaPb7ZrhdRaPn92A10fDHv0CHo+RBO4jbIyKiuVVFTuv6iFY3FA8A/dTqpvDR1Yf2Zasd4W+uPPJt+LjCUfeqyVskd/A1gvCam2i31p+7Yn5q9C9PX/z4vb4stJv+Xc6z+5GffUXBFdD+U+akXRIx+zbEZjZptuTL9xTuLmDJwegk1Co+zjcH/d7Xv+Wb/b+MQ6fwZYxh8fOI8TqXUUy+cbroYSL7ypgOvXnZTCxcHbpr2n/bhtcTTmGQfSdi03N+3bLbn6/TS5rbe8yX6Q6s/lWLiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIfq8/tzAurNL1lJsAAAAASUVORK5CYII="
+            alt="babysitter profile picture" class="profile">
+          <h2 class="baby-sitter-name">APPPLE</h2>
+          <!-- <img src="https://github.com/r-e-d-ant/Babysitter-center-landing-page/blob/main/assets/img/hearts.svg?raw=true" class="heart" alt=""> -->
+          <span class="heart"></span>
+          <p class="baby-sitter-story">Apple Inc. is an American multinational technology company that specializes in
+            consumer electronics, computer software and online services.</p>
+        </div>
+
+        <div class="babysitter glide_slide">
+          <img src="http://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4OAgf?ver=6a31"
+            alt="babysitter profile picture" class="profile">
+          <h2 class="baby-sitter-name">MICROSOFT</h2>
+          <!-- <img src="https://github.com/r-e-d-ant/Babysitter-center-landing-page/blob/main/assets/img/hearts.svg?raw=true" class="heart" alt=""> -->
+          <span class="heart"></span>
+          <p class="baby-sitter-story">Microsoft Corporation is an American multinational technology corporation which
+            produces computer software, consumer electronics, personal computers, and related services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- testimonials section -->
+  <section id="testimonials" class="section_5 testimonials container">
+    <h2 class="testimonials-title title">TOP REVIEWS</h2>
+    <div class="testimonials-container">
+      <div class="testimony">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="" class="profile">
+        <h3 class="tester-name">Yash Gautam</h3>
+        <p class="testimony-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim incidunt at,
+          perspiciatis repudiandae maiores ducimus minima repellat eveniet suscipit.</p>
+      </div>
+      <div class="testimony">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="" class="profile">
+        <h3 class="tester-name">AKaash Sharma</h3>
+        <p class="testimony-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim incidunt at,
+          perspiciatis repudiandae maiores ducimus minima repellat eveniet suscipit.</p>
+      </div>
+      <div class="testimony">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="" class="profile">
+        <h3 class="tester-name">Vidyut Yadav</h3>
+        <p class="testimony-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid enim incidunt at,
+          perspiciatis repudiandae maiores ducimus minima repellat eveniet suscipit.</p>
+      </div>
+    </div>
+
+    <i class="left-direction direction"></i>
+    <i class="right-direction direction"></i>
+
+    <img src="" alt="" class="love">
+  </section>
+
+  <!-- ===== FOOTER ====== -->
+  <footer id="footer">
+    <h2 class="footer-title container">Contact US</h2>
+    <div class="top-footer container">
+      <div>
+        <div class="address footer-element">
+          <i class="bx bx-home"></i>
+          <p class="address-text">27-98 st Mugs Ave, Animals, NY 23843, Kigali</p>
+        </div>
+        <div class="phone footer-element">
+          <i class="bx bx-phone"></i>
+          <p class="phone-text">+002 20022002200</p>
+        </div>
+        <div class="email footer-element">
+          <i class="bx bx-envelope"></i>
+          <p class="email-text">example@domain.com</p>
+        </div>
+      </div>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <!-- <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=rusizi,%20burundi&t=&z=13&ie=UTF8&iwloc=&output=embed" width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
+          <!-- <a href="https://123movies-a.com"></a><br> -->
+          <!-- <a href="https://www.embedgooglemap.net"></a> -->
+        </div>
+      </div>
+    </div>
+    <div class="end-footer">
+      <span class="copy">© 2021 copyright, Edunxt</span>
+      <!-- <a href="#" class="designer">EDUNXT</a> -->
+    </div>
+  </footer>
+
+  <script src=""></script>
+</body>
+
+</html>
